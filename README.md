@@ -55,7 +55,7 @@ This site is configured to automatically deploy to GitHub Pages using GitHub Act
 1. Go to your repository Settings on GitHub
 2. Navigate to "Pages" in the left sidebar
 3. Under "Build and deployment", select "Source" as "GitHub Actions"
-4. The site will automatically deploy when you push to the main, master, or copilot/host-webpage-on-github branch
+4. The site will automatically deploy when you push to the main or master branch
 5. Once deployed, your site will be available at: `https://op-era.github.io/NYCMuseums/`
 
 The deployment workflow is configured in `.github/workflows/deploy.yml`.
