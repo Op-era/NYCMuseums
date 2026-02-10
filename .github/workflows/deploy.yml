@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - copilot/host-webpage-on-github
   workflow_dispatch:
 
 permissions:
