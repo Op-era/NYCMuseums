@@ -64,7 +64,19 @@ function getSessionId() {
 
 // Generate unique session ID
 function generateSessionId() {
-    return 'session-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    return 'session-' + Date.now() + '-' + Math.random().toString(36).substring(2, 11);
+}
+
+// Get user IP address
+async function getUserIP() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        console.error('Could not fetch IP:', error);
+        return 'Unknown IP';
+    }
 }
 
 // Load vote counts from localStorage
@@ -98,14 +110,22 @@ function markUserAsVoted() {
 }
 
 // Log vote
-function logVote(museumId, museumName) {
+async function logVote(museumId, museumName) {
     const logs = getVoteLogs();
+    const totalVotes = museums.reduce((sum, m) => sum + m.votes, 0);
+    const museumVotes = museums.find(m => m.id === museumId).votes;
+    const percentage = totalVotes > 0 ? ((museumVotes / totalVotes) * 100).toFixed(1) : 0;
+    const ipAddress = await getUserIP();
+    
     const log = {
         museumId: museumId,
         museumName: museumName,
         timestamp: new Date().toISOString(),
         sessionId: getSessionId(),
-        dateFormatted: new Date().toLocaleString()
+        dateFormatted: new Date().toLocaleString(),
+        ipAddress: ipAddress,
+        votePercentage: percentage,
+        totalVotesAtTime: totalVotes
     };
     logs.push(log);
     localStorage.setItem(STORAGE_KEYS.VOTE_LOGS, JSON.stringify(logs));
@@ -152,7 +172,7 @@ function renderMuseums() {
 }
 
 // Handle vote
-function handleVote(event) {
+async function handleVote(event) {
     const museumId = event.target.getAttribute('data-museum-id');
     const museum = museums.find(m => m.id === museumId);
     
@@ -169,8 +189,8 @@ function handleVote(event) {
     // Save to localStorage
     saveVoteCounts();
     
-    // Log the vote
-    logVote(museum.id, museum.name);
+    // Log the vote (async)
+    await logVote(museum.id, museum.name);
     
     // Mark as voted
     markUserAsVoted();
@@ -252,7 +272,9 @@ function displayLogs() {
             <strong>Vote #${logs.length - index}</strong><br>
             Museum: ${log.museumName}<br>
             Time: ${log.dateFormatted}<br>
-            Session ID: ${log.sessionId}
+            IP Address: ${log.ipAddress || 'Unknown'}<br>
+            Session ID: ${log.sessionId}<br>
+            Vote Percentage: ${log.votePercentage || 'N/A'}% (${log.totalVotesAtTime || 'N/A'} total votes at time)
         `;
         
         container.appendChild(logEntry);
