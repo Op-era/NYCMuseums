@@ -100,7 +100,7 @@ function displayMuseums() {
                 <h3>${museum.name}</h3>
                 <span class="category">${museum.category}</span>
                 <p>${museum.description}</p>
-                <button class="vote-button" onclick="vote(${museum.id})" ${hasVoted ? 'disabled' : ''}>
+                <button class="vote-button" data-museum-id="${museum.id}" onclick="vote(${museum.id})" ${hasVoted ? 'disabled' : ''}>
                     ${hasVoted ? (userVote == museum.id ? 'Your Vote!' : 'Vote Cast') : 'Vote for This Museum'}
                 </button>
             </div>
@@ -138,9 +138,10 @@ function vote(museumId) {
     voteStatus.classList.remove('hidden');
     
     // Disable all vote buttons and update their text
-    document.querySelectorAll('.vote-button').forEach((button, index) => {
+    document.querySelectorAll('.vote-button').forEach(button => {
         button.disabled = true;
-        if (index === museumId - 1) {
+        const buttonMuseumId = parseInt(button.getAttribute('data-museum-id'));
+        if (buttonMuseumId === museumId) {
             button.textContent = 'Your Vote!';
         } else {
             button.textContent = 'Vote Cast';
@@ -178,7 +179,7 @@ function logVote(museumId) {
 function getSessionId() {
     let sessionId = localStorage.getItem('sessionId');
     if (!sessionId) {
-        sessionId = 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+        sessionId = 'session_' + Math.random().toString(36).substring(2, 11) + '_' + Date.now();
         localStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
