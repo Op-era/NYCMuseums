@@ -1,6 +1,6 @@
 // NYC Museums Data
-// Using placeholder images from picsum.photos for reliable image loading
-// Each museum has multiple themed images representing different aspects
+// Using CSS-based gradients for visual representation instead of external images
+// Each museum has a unique color scheme representing its character
 const museums = [
     {
         id: 'broadway-museum',
@@ -9,26 +9,10 @@ const museums = [
         expandedInfo: 'The Museum of Broadway is the first permanent museum dedicated to Broadway\'s rich history. Located in Times Square, it features immersive exhibits showcasing over 500 artifacts including costumes, props, and set pieces from legendary shows. Visitors can explore interactive displays about the evolution of Broadway from its early days to modern blockbusters, see Tony Awards, and learn about the creative process behind bringing a show to the stage.',
         website: 'https://www.themuseumofbroadway.com/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/broadway1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/broadway2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/broadway3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/broadway4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     },
@@ -39,26 +23,10 @@ const museums = [
         expandedInfo: 'Founded in 1869, the American Museum of Natural History is one of the world\'s preeminent scientific and cultural institutions. With 45 permanent exhibition halls, the museum showcases millions of specimens including dinosaur fossils, the famous Blue Whale, meteorites, and cultural artifacts from around the world. The Rose Center for Earth and Space features the Hayden Planetarium. The museum is also a vital research institution with over 200 scientists studying biodiversity, evolution, and cultural anthropology.',
         website: 'https://www.amnh.org/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/amnh1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/amnh2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/amnh3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/amnh4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     },
@@ -69,26 +37,10 @@ const museums = [
         expandedInfo: 'The Metropolitan Museum of Art, founded in 1870, is the largest art museum in the United States. Its permanent collection contains over 2 million works spanning 5,000 years of world culture from prehistory to the present. Highlights include the Temple of Dendur, an extensive collection of European paintings, the American Wing, Egyptian art, and the renowned Costume Institute. The Met also operates The Met Cloisters in Fort Tryon Park, dedicated to medieval European art and architecture.',
         website: 'https://www.metmuseum.org/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/met1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/met2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/met3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/met4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     },
@@ -99,26 +51,10 @@ const museums = [
         expandedInfo: 'Located on Pier 86 on the Hudson River, the Intrepid Museum showcases the legendary aircraft carrier USS Intrepid, which served in World War II, Vietnam, and as a NASA recovery vessel. The museum features the Space Shuttle Enterprise, the British Airways Concorde, the submarine USS Growler, and dozens of aircraft. Interactive exhibits explore innovation in sea, air, and space, while honoring the heroes who served aboard these vessels. The museum also hosts educational programs and special events year-round.',
         website: 'https://www.intrepidmuseum.org/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/intrepid1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/intrepid2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/intrepid3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/intrepid4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     },
@@ -129,26 +65,10 @@ const museums = [
         expandedInfo: 'MoMA, founded in 1929, is widely regarded as one of the most influential modern art museums in the world. Its collection includes iconic works such as Van Gogh\'s "The Starry Night," Picasso\'s "Les Demoiselles d\'Avignon," and Warhol\'s "Campbell\'s Soup Cans." The museum\'s holdings span painting, sculpture, photography, film, design, and performance art. MoMA also features the Abby Aldrich Rockefeller Sculpture Garden and hosts film screenings, talks, and special exhibitions throughout the year.',
         website: 'https://www.moma.org/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/moma1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/moma2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/moma3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/moma4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     },
@@ -159,26 +79,10 @@ const museums = [
         expandedInfo: 'Lincoln Center is the world\'s leading performing arts center, encompassing 16.3 acres on Manhattan\'s Upper West Side. Built in the 1960s, it is home to 11 resident organizations including the Metropolitan Opera, New York Philharmonic, New York City Ballet, and The Juilliard School. The complex features multiple theaters and concert halls including David Geffen Hall, the Metropolitan Opera House, and David H. Koch Theater. Lincoln Center presents over 5,000 performances annually, welcoming millions of visitors from around the globe.',
         website: 'https://www.lincolncenter.org/',
         images: [
-            {
-                url: 'https://picsum.photos/seed/lincoln1/800/600',
-                attribution: 'Photo: Sample Image 1',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/lincoln2/800/600',
-                attribution: 'Photo: Sample Image 2',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/lincoln3/800/600',
-                attribution: 'Photo: Sample Image 3',
-                link: 'https://picsum.photos'
-            },
-            {
-                url: 'https://picsum.photos/seed/lincoln4/800/600',
-                attribution: 'Photo: Sample Image 4',
-                link: 'https://picsum.photos'
-            }
+            { id: 1 },
+            { id: 2 },
+            { id: 3 },
+            { id: 4 }
         ],
         votes: 0
     }
@@ -313,6 +217,8 @@ function renderMuseums() {
             imgDiv.setAttribute('aria-label', `${museum.name} - Image ${index + 1}`);
             
             // Create unique gradient for each image
+            // Start at 135° and rotate 45° for each subsequent image (135°, 180°, 225°, 270°)
+            // This creates visual variety while maintaining aesthetic consistency
             const angle = 135 + (index * 45);
             const color1 = colors[0];
             const color2 = colors[1];
@@ -343,15 +249,9 @@ function renderMuseums() {
         const info = document.createElement('div');
         info.className = 'museum-info';
         
-        // Build attributions for all images
-        const attributions = museum.images.map((img, idx) => 
-            `<a href="${img.link}" target="_blank" rel="noopener">${img.attribution}</a>`
-        ).join(' | ');
-        
         info.innerHTML = `
             <h3>${museum.name}</h3>
             <p>${museum.description}</p>
-            <p class="image-attribution">${attributions}</p>
             <button class="vote-btn" data-museum-id="${museum.id}" ${hasVoted ? 'disabled' : ''}>
                 ${hasVoted ? 'Voting Closed' : 'Vote for this Museum!'}
             </button>
