@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Museums Poll - Sunnyside Highschool Wildcats Playhouse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Sunnyside Highschool Wildcats Playhouse 🎭</h1>
+            <h2>NYC Museums Poll</h2>
+            <p class="subtitle">Help us choose our next field trip destination!</p>
+            <p class="privacy-notice">By voting, you consent to logging your vote with timestamp, session ID, and IP address for record-keeping purposes.</p>
+        </header>
+
+        <div id="voting-status" class="status-message"></div>
+
+        <div id="museums-container" class="museums-grid">
+            <!-- Museums will be dynamically loaded here -->
+        </div>
+
+        <div class="results-section">
+            <h3>Current Results</h3>
+            <div id="results-container"></div>
+            <button id="show-logs-btn" class="secondary-btn">View Vote Logs</button>
+        </div>
+
+        <div id="logs-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Vote Logs</h3>
+                <div id="logs-container"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Sunnyside Highschool Wildcats Playhouse</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
