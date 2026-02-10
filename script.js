@@ -1,22 +1,22 @@
 // NYC Museums Data
-// All images are from Wikimedia Commons with CC0 or CC-BY licenses
+// All images are from Wikimedia Commons with CC0 or CC BY 4.0 licenses
 const museums = [
     {
         id: 'broadway-museum',
         name: 'The Museum of Broadway',
         description: 'Explore the history of Broadway theater with interactive exhibits, costumes, and memorabilia from iconic shows. Perfect for theater lovers!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg/800px-Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg',
-        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Shubert_Theatre,_Broadway,_Manhattan,_New_York_(40602729783).jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Broadway_and_Times_Square_by_night.jpg/800px-Broadway_and_Times_Square_by_night.jpg',
+        imageAttribution: 'Photo: Luiz Gadelha Jr., CC BY 2.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Broadway_and_Times_Square_by_night.jpg',
         votes: 0
     },
     {
         id: 'american-museum-natural-history',
         name: 'American Museum of Natural History',
         description: 'One of NYC\'s most famous museums featuring dinosaur fossils, space exhibits, and cultural artifacts. A classic field trip destination!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg/800px-American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg',
-        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History,_Central_Park_West_facade.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/American_Museum_of_Natural_History_during_the_day.jpg/800px-American_Museum_of_Natural_History_during_the_day.jpg',
+        imageAttribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_during_the_day.jpg',
         votes: 0
     },
     {
@@ -32,27 +32,27 @@ const museums = [
         id: 'intrepid-museum',
         name: 'Intrepid Sea, Air & Space Museum',
         description: 'Historic aircraft carrier turned museum featuring the Space Shuttle Enterprise, submarines, and military aircraft. An adventure on the Hudson River!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg/800px-Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
-        imageAttribution: 'Photo: Anthony22, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/USS_Intrepid_%28CV-11%29_from_the_air.jpg/800px-USS_Intrepid_%28CV-11%29_from_the_air.jpg',
+        imageAttribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:USS_Intrepid_(CV-11)_from_the_air.jpg',
         votes: 0
     },
     {
         id: 'moma',
         name: 'Museum of Modern Art (MoMA)',
         description: 'Contemporary and modern art museum featuring works by Van Gogh, Warhol, and Picasso. Includes performance art and film exhibitions.',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
-        imageAttribution: 'Photo: Arad, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:MoMA_NY_USA_1.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg/800px-Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg',
+        imageAttribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_(MoMA),_Manhattan,_New_York_City.jpg',
         votes: 0
     },
     {
         id: 'lincoln-center',
         name: 'Lincoln Center for the Performing Arts',
         description: 'World-class performing arts complex home to the Metropolitan Opera, New York Philharmonic, and New York City Ballet. The heart of NYC\'s performing arts scene!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lincoln_Center_Night.jpg/800px-Lincoln_Center_Night.jpg',
-        imageAttribution: 'Photo: Gryffindor, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_Night.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lincoln_Center_plaza_and_fountain.jpg/800px-Lincoln_Center_plaza_and_fountain.jpg',
+        imageAttribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_plaza_and_fountain.jpg',
         votes: 0
     }
 ];
