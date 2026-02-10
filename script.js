@@ -1,58 +1,112 @@
 // NYC Museums Data
-// All images are from Wikimedia Commons with CC0 or CC-BY licenses
+// All images are from Wikimedia Commons with free licenses (CC0, CC BY, CC BY-SA)
 const museums = [
     {
         id: 'broadway-museum',
         name: 'The Museum of Broadway',
         description: 'Explore the history of Broadway theater with interactive exhibits, costumes, and memorabilia from iconic shows. Perfect for theater lovers!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg/800px-Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg',
-        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Shubert_Theatre,_Broadway,_Manhattan,_New_York_(40602729783).jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Times_Square_by_night_03.jpg/800px-Times_Square_by_night_03.jpg',
+                attribution: 'Photo: Terabass, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Times_Square_by_night_03.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Broadway_theatre_interior_2022.jpg/800px-Broadway_theatre_interior_2022.jpg',
+                attribution: 'Photo: Dmadeo, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Broadway_theatre_interior_2022.jpg'
+            }
+        ],
         votes: 0
     },
     {
         id: 'american-museum-natural-history',
         name: 'American Museum of Natural History',
         description: 'One of NYC\'s most famous museums featuring dinosaur fossils, space exhibits, and cultural artifacts. A classic field trip destination!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg/800px-American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg',
-        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History,_Central_Park_West_facade.jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/American_Museum_of_Natural_History_during_the_day.jpg/800px-American_Museum_of_Natural_History_during_the_day.jpg',
+                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_during_the_day.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Apatosaurus_mount%2C_AMNH.jpg/800px-Apatosaurus_mount%2C_AMNH.jpg',
+                attribution: 'Photo: Ryan Somma, CC BY-SA 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Apatosaurus_mount,_AMNH.jpg'
+            }
+        ],
         votes: 0
     },
     {
         id: 'met-museum',
         name: 'The Metropolitan Museum of Art',
         description: 'World-renowned art museum with collections spanning 5,000 years. Features costume exhibits that inspire theatrical design.',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
-        imageAttribution: 'Photo: Fcb981, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
+                attribution: 'Photo: Fcb981, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg/800px-The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg',
+                attribution: 'Photo: Shawn Carpenter, CC BY 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg'
+            }
+        ],
         votes: 0
     },
     {
         id: 'intrepid-museum',
         name: 'Intrepid Sea, Air & Space Museum',
         description: 'Historic aircraft carrier turned museum featuring the Space Shuttle Enterprise, submarines, and military aircraft. An adventure on the Hudson River!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg/800px-Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
-        imageAttribution: 'Photo: Anthony22, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/USS_Intrepid_%28CV-11%29_from_the_air.jpg/800px-USS_Intrepid_%28CV-11%29_from_the_air.jpg',
+                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:USS_Intrepid_(CV-11)_from_the_air.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg/800px-Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
+                attribution: 'Photo: Anthony22, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg'
+            }
+        ],
         votes: 0
     },
     {
         id: 'moma',
         name: 'Museum of Modern Art (MoMA)',
         description: 'Contemporary and modern art museum featuring works by Van Gogh, Warhol, and Picasso. Includes performance art and film exhibitions.',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
-        imageAttribution: 'Photo: Arad, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:MoMA_NY_USA_1.jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg/800px-Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg',
+                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_(MoMA),_Manhattan,_New_York_City.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/MoMA_Sculpture_Garden_2.jpg/800px-MoMA_Sculpture_Garden_2.jpg',
+                attribution: 'Photo: Wally Gobetz, CC BY-SA 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:MoMA_Sculpture_Garden_2.jpg'
+            }
+        ],
         votes: 0
     },
     {
         id: 'lincoln-center',
         name: 'Lincoln Center for the Performing Arts',
         description: 'World-class performing arts complex home to the Metropolitan Opera, New York Philharmonic, and New York City Ballet. The heart of NYC\'s performing arts scene!',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lincoln_Center_Night.jpg/800px-Lincoln_Center_Night.jpg',
-        imageAttribution: 'Photo: Gryffindor, CC BY-SA 3.0',
-        imageLink: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_Night.jpg',
+        images: [
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lincoln_Center_plaza_and_fountain.jpg/800px-Lincoln_Center_plaza_and_fountain.jpg',
+                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_plaza_and_fountain.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/David_H_Koch_Theater_interior_2012.jpg/800px-David_H_Koch_Theater_interior_2012.jpg',
+                attribution: 'Photo: Gageskidmore, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:David_H_Koch_Theater_interior_2012.jpg'
+            }
+        ],
         votes: 0
     }
 ];
@@ -161,22 +215,48 @@ function renderMuseums() {
         const card = document.createElement('div');
         card.className = 'museum-card';
         
-        const img = document.createElement('img');
-        img.src = museum.image;
-        img.alt = museum.name;
-        img.className = 'museum-image';
-        img.onerror = function() {
-            this.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #d97706 100%)';
-            this.style.display = 'block';
-        };
+        // Create image gallery container
+        const imageGallery = document.createElement('div');
+        imageGallery.className = 'museum-image-gallery';
+        
+        // Add all images
+        museum.images.forEach((imageData, index) => {
+            const img = document.createElement('img');
+            img.src = imageData.url;
+            img.alt = `${museum.name} - Image ${index + 1}`;
+            img.className = `museum-image ${index === 0 ? 'active' : ''}`;
+            img.onerror = function() {
+                this.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #d97706 100%)';
+                this.style.display = 'block';
+            };
+            imageGallery.appendChild(img);
+        });
+        
+        // Add navigation dots if more than one image
+        if (museum.images.length > 1) {
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'image-dots';
+            museum.images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                dot.onclick = () => showImage(imageGallery, dotsContainer, index);
+                dotsContainer.appendChild(dot);
+            });
+            imageGallery.appendChild(dotsContainer);
+        }
         
         const info = document.createElement('div');
         info.className = 'museum-info';
         
+        // Build attributions for all images
+        const attributions = museum.images.map((img, idx) => 
+            `<a href="${img.link}" target="_blank" rel="noopener">${img.attribution}</a>`
+        ).join(' | ');
+        
         info.innerHTML = `
             <h3>${museum.name}</h3>
             <p>${museum.description}</p>
-            ${museum.imageAttribution ? `<p class="image-attribution"><a href="${museum.imageLink}" target="_blank" rel="noopener">${museum.imageAttribution}</a></p>` : ''}
+            <p class="image-attribution">${attributions}</p>
             <button class="vote-btn" data-museum-id="${museum.id}" ${hasVoted ? 'disabled' : ''}>
                 ${hasVoted ? 'Voting Closed' : 'Vote for this Museum!'}
             </button>
@@ -185,7 +265,7 @@ function renderMuseums() {
             </div>
         `;
         
-        card.appendChild(img);
+        card.appendChild(imageGallery);
         card.appendChild(info);
         container.appendChild(card);
     });
@@ -193,6 +273,20 @@ function renderMuseums() {
     // Add vote button listeners
     document.querySelectorAll('.vote-btn').forEach(btn => {
         btn.addEventListener('click', handleVote);
+    });
+}
+
+// Show specific image in gallery
+function showImage(gallery, dotsContainer, index) {
+    const images = gallery.querySelectorAll('.museum-image');
+    const dots = dotsContainer.querySelectorAll('.dot');
+    
+    images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
     });
 }
 
@@ -328,11 +422,39 @@ function setupModal() {
     };
 }
 
+// Render attributions at bottom of page
+function renderAttributions() {
+    const container = document.getElementById('attributions-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    museums.forEach(museum => {
+        const museumAttr = document.createElement('div');
+        museumAttr.className = 'museum-attribution';
+        
+        const title = document.createElement('h4');
+        title.textContent = museum.name;
+        museumAttr.appendChild(title);
+        
+        const list = document.createElement('ul');
+        museum.images.forEach((img, idx) => {
+            const item = document.createElement('li');
+            item.innerHTML = `Image ${idx + 1}: <a href="${img.link}" target="_blank" rel="noopener">${img.attribution}</a>`;
+            list.appendChild(item);
+        });
+        
+        museumAttr.appendChild(list);
+        container.appendChild(museumAttr);
+    });
+}
+
 // Initialize app
 function init() {
     loadVoteCounts();
     renderMuseums();
     renderResults();
+    renderAttributions();
     setupModal();
     
     // Check if user has voted and show info message
