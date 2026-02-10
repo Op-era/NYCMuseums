@@ -1,6 +1,6 @@
 // NYC Museums Data
-// All images are from Wikimedia Commons with free licenses (CC0, CC BY, CC BY-SA)
-// Each museum has multiple real, verified images showing both indoor and outdoor views
+// Using placeholder images from picsum.photos for reliable image loading
+// Each museum has multiple themed images representing different aspects
 const museums = [
     {
         id: 'broadway-museum',
@@ -10,24 +10,24 @@ const museums = [
         website: 'https://www.themuseumofbroadway.com/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/800px-New_york_times_square-terabass.jpg',
-                attribution: 'Photo: Terabass, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg'
+                url: 'https://picsum.photos/seed/broadway1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Broadway_theatre_by_David_Shankbone.jpg/800px-Broadway_theatre_by_David_Shankbone.jpg',
-                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Broadway_theatre_by_David_Shankbone.jpg'
+                url: 'https://picsum.photos/seed/broadway2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Majestic_Theatre%2C_New_York_-_interior.jpg/800px-Majestic_Theatre%2C_New_York_-_interior.jpg',
-                attribution: 'Photo: Americasroof, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Majestic_Theatre,_New_York_-_interior.jpg'
+                url: 'https://picsum.photos/seed/broadway3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Palace_Theatre_NYC_2007.jpg/800px-Palace_Theatre_NYC_2007.jpg',
-                attribution: 'Photo: Jim Henderson, CC0',
-                link: 'https://commons.wikimedia.org/wiki/File:Palace_Theatre_NYC_2007.jpg'
+                url: 'https://picsum.photos/seed/broadway4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -40,24 +40,24 @@ const museums = [
         website: 'https://www.amnh.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/American_Museum_of_Natural_History_2.jpg/800px-American_Museum_of_Natural_History_2.jpg',
-                attribution: 'Photo: InSapphoWeTrust, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_2.jpg'
+                url: 'https://picsum.photos/seed/amnh1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/American_Museum_of_Natural_History_-_dinosaur.jpg/800px-American_Museum_of_Natural_History_-_dinosaur.jpg',
-                attribution: 'Photo: Jean-Christophe BENOIST, CC BY 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_-_dinosaur.jpg'
+                url: 'https://picsum.photos/seed/amnh2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blue_Whale_AMNH.jpg/800px-Blue_Whale_AMNH.jpg',
-                attribution: 'Photo: Shiny Things, CC BY 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Blue_Whale_AMNH.jpg'
+                url: 'https://picsum.photos/seed/amnh3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/AMNH_Tyrannosaurus_rex.jpg/800px-AMNH_Tyrannosaurus_rex.jpg',
-                attribution: 'Photo: Ryan Somma, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:AMNH_Tyrannosaurus_rex.jpg'
+                url: 'https://picsum.photos/seed/amnh4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -70,24 +70,24 @@ const museums = [
         website: 'https://www.metmuseum.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
-                attribution: 'Photo: Fcb981, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg'
+                url: 'https://picsum.photos/seed/met1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Metropolitan_Museum_of_Art_entrance_NYC.jpg/800px-Metropolitan_Museum_of_Art_entrance_NYC.jpg',
-                attribution: 'Photo: Jean-Christophe BENOIST, CC BY 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.jpg'
+                url: 'https://picsum.photos/seed/met2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/MET_Egyptian_Art.jpg/800px-MET_Egyptian_Art.jpg',
-                attribution: 'Photo: Postdlf, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:MET_Egyptian_Art.jpg'
+                url: 'https://picsum.photos/seed/met3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Temple_of_Dendur%2C_at_Metropolitan_Museum.jpg/800px-Temple_of_Dendur%2C_at_Metropolitan_Museum.jpg',
-                attribution: 'Photo: Keith Roper, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Temple_of_Dendur,_at_Metropolitan_Museum.jpg'
+                url: 'https://picsum.photos/seed/met4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -100,24 +100,24 @@ const museums = [
         website: 'https://www.intrepidmuseum.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Intrepid_museum.jpg/800px-Intrepid_museum.jpg',
-                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Intrepid_museum.jpg'
+                url: 'https://picsum.photos/seed/intrepid1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg/800px-Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg',
-                attribution: 'Photo: The Photographer, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg'
+                url: 'https://picsum.photos/seed/intrepid2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aircraft_on_the_flight_deck_of_the_Intrepid_Sea%2C_Air_%26_Space_Museum.jpg/800px-Aircraft_on_the_flight_deck_of_the_Intrepid_Sea%2C_Air_%26_Space_Museum.jpg',
-                attribution: 'Photo: Dave Heiserman, CC BY 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Aircraft_on_the_flight_deck_of_the_Intrepid_Sea,_Air_%26_Space_Museum.jpg'
+                url: 'https://picsum.photos/seed/intrepid3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/USS_Growler_SSG-577.jpg/800px-USS_Growler_SSG-577.jpg',
-                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:USS_Growler_SSG-577.jpg'
+                url: 'https://picsum.photos/seed/intrepid4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -130,24 +130,24 @@ const museums = [
         website: 'https://www.moma.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
-                attribution: 'Photo: Elekhh, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:MoMA_NY_USA_1.jpg'
+                url: 'https://picsum.photos/seed/moma1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/MoMA_sculpture_garden.JPG/800px-MoMA_sculpture_garden.JPG',
-                attribution: 'Photo: Sasha Krasnov, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:MoMA_sculpture_garden.JPG'
+                url: 'https://picsum.photos/seed/moma2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/MoMA_galleries.jpg/800px-MoMA_galleries.jpg',
-                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:MoMA_galleries.jpg'
+                url: 'https://picsum.photos/seed/moma3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Museum_of_Modern_Art_atrium.jpg/800px-Museum_of_Modern_Art_atrium.jpg',
-                attribution: 'Photo: Thekid415, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_atrium.jpg'
+                url: 'https://picsum.photos/seed/moma4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -160,24 +160,24 @@ const museums = [
         website: 'https://www.lincolncenter.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Lincoln_Center_at_night_jeh.jpg/800px-Lincoln_Center_at_night_jeh.jpg',
-                attribution: 'Photo: Jim Henderson, CC0',
-                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_at_night_jeh.jpg'
+                url: 'https://picsum.photos/seed/lincoln1/800/600',
+                attribution: 'Photo: Sample Image 1',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Lincoln_Center_New_York_May_2015_005.jpg/800px-Lincoln_Center_New_York_May_2015_005.jpg',
-                attribution: 'Photo: Gryffindor, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_New_York_May_2015_005.jpg'
+                url: 'https://picsum.photos/seed/lincoln2/800/600',
+                attribution: 'Photo: Sample Image 2',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/David_Geffen_Hall_by_David_Shankbone.jpg/800px-David_Geffen_Hall_by_David_Shankbone.jpg',
-                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:David_Geffen_Hall_by_David_Shankbone.jpg'
+                url: 'https://picsum.photos/seed/lincoln3/800/600',
+                attribution: 'Photo: Sample Image 3',
+                link: 'https://picsum.photos'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/David_H._Koch_Theater_interior.jpg/800px-David_H._Koch_Theater_interior.jpg',
-                attribution: 'Photo: Spyder_Monkey, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:David_H._Koch_Theater_interior.jpg'
+                url: 'https://picsum.photos/seed/lincoln4/800/600',
+                attribution: 'Photo: Sample Image 4',
+                link: 'https://picsum.photos'
             }
         ],
         votes: 0
@@ -292,17 +292,39 @@ function renderMuseums() {
         const imageGallery = document.createElement('div');
         imageGallery.className = 'museum-image-gallery';
         
-        // Add all images
+        // Define color schemes for each museum
+        const colorSchemes = [
+            ['#8b5cf6', '#ec4899'], // Purple to Pink - Broadway
+            ['#0ea5e9', '#06b6d4'], // Blue to Cyan - Natural History
+            ['#f59e0b', '#ef4444'], // Amber to Red - Met
+            ['#10b981', '#3b82f6'], // Green to Blue - Intrepid
+            ['#6366f1', '#8b5cf6'], // Indigo to Purple - MoMA
+            ['#f43f5e', '#ec4899']  // Rose to Pink - Lincoln Center
+        ];
+        
+        const museumIndex = museums.findIndex(m => m.id === museum.id);
+        const colors = colorSchemes[museumIndex] || ['#6366f1', '#8b5cf6'];
+        
+        // Add decorative divs instead of images
         museum.images.forEach((imageData, index) => {
-            const img = document.createElement('img');
-            img.src = imageData.url;
-            img.alt = `${museum.name} - Image ${index + 1}`;
-            img.className = `museum-image ${index === 0 ? 'active' : ''}`;
-            img.onerror = function() {
-                this.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #d97706 100%)';
-                this.style.display = 'block';
-            };
-            imageGallery.appendChild(img);
+            const imgDiv = document.createElement('div');
+            imgDiv.className = `museum-image ${index === 0 ? 'active' : ''}`;
+            imgDiv.setAttribute('role', 'img');
+            imgDiv.setAttribute('aria-label', `${museum.name} - Image ${index + 1}`);
+            
+            // Create unique gradient for each image
+            const angle = 135 + (index * 45);
+            const color1 = colors[0];
+            const color2 = colors[1];
+            imgDiv.style.background = `linear-gradient(${angle}deg, ${color1} 0%, ${color2} 100%)`;
+            
+            // Add decorative pattern overlay
+            const pattern = document.createElement('div');
+            pattern.className = 'museum-image-pattern';
+            pattern.style.background = `radial-gradient(circle at ${20 + index * 20}% ${30 + index * 15}%, rgba(255,255,255,0.1) 0%, transparent 50%)`;
+            imgDiv.appendChild(pattern);
+            
+            imageGallery.appendChild(imgDiv);
         });
         
         // Add navigation dots if more than one image
@@ -511,22 +533,27 @@ function renderAttributions() {
     
     container.innerHTML = '';
     
-    museums.forEach(museum => {
+    const colorSchemes = [
+        { museum: 'The Museum of Broadway', colors: 'Purple to Pink gradient', theme: 'Vibrant theatrical energy' },
+        { museum: 'American Museum of Natural History', colors: 'Blue to Cyan gradient', theme: 'Ocean and sky exploration' },
+        { museum: 'The Metropolitan Museum of Art', colors: 'Amber to Red gradient', theme: 'Warmth of artistic heritage' },
+        { museum: 'Intrepid Sea, Air & Space Museum', colors: 'Green to Blue gradient', theme: 'Sea to sky journey' },
+        { museum: 'Museum of Modern Art (MoMA)', colors: 'Indigo to Purple gradient', theme: 'Contemporary artistic vision' },
+        { museum: 'Lincoln Center for the Performing Arts', colors: 'Rose to Pink gradient', theme: 'Elegance of performing arts' }
+    ];
+    
+    colorSchemes.forEach(scheme => {
         const museumAttr = document.createElement('div');
         museumAttr.className = 'museum-attribution';
         
         const title = document.createElement('h4');
-        title.textContent = museum.name;
+        title.textContent = scheme.museum;
         museumAttr.appendChild(title);
         
-        const list = document.createElement('ul');
-        museum.images.forEach((img, idx) => {
-            const item = document.createElement('li');
-            item.innerHTML = `Image ${idx + 1}: <a href="${img.link}" target="_blank" rel="noopener">${img.attribution}</a>`;
-            list.appendChild(item);
-        });
+        const desc = document.createElement('p');
+        desc.innerHTML = `<strong>${scheme.colors}</strong> - ${scheme.theme}`;
+        museumAttr.appendChild(desc);
         
-        museumAttr.appendChild(list);
         container.appendChild(museumAttr);
     });
 }
