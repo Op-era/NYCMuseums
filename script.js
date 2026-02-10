@@ -148,20 +148,31 @@ function renderMuseums() {
         const card = document.createElement('div');
         card.className = 'museum-card';
         
-        card.innerHTML = `
-            <img src="${museum.image}" alt="${museum.name}" class="museum-image" onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)'; this.style.display='block';">
-            <div class="museum-info">
-                <h3>${museum.name}</h3>
-                <p>${museum.description}</p>
-                <button class="vote-btn" data-museum-id="${museum.id}" ${hasVoted ? 'disabled' : ''}>
-                    ${hasVoted ? 'Voting Closed' : 'Vote for this Museum!'}
-                </button>
-                <div class="vote-count">
-                    ${museum.votes} vote${museum.votes !== 1 ? 's' : ''}
-                </div>
+        const img = document.createElement('img');
+        img.src = museum.image;
+        img.alt = museum.name;
+        img.className = 'museum-image';
+        img.onerror = function() {
+            this.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #d97706 100%)';
+            this.style.display = 'block';
+        };
+        
+        const info = document.createElement('div');
+        info.className = 'museum-info';
+        
+        info.innerHTML = `
+            <h3>${museum.name}</h3>
+            <p>${museum.description}</p>
+            <button class="vote-btn" data-museum-id="${museum.id}" ${hasVoted ? 'disabled' : ''}>
+                ${hasVoted ? 'Voting Closed' : 'Vote for this Museum!'}
+            </button>
+            <div class="vote-count">
+                ${museum.votes} vote${museum.votes !== 1 ? 's' : ''}
             </div>
         `;
         
+        card.appendChild(img);
+        card.appendChild(info);
         container.appendChild(card);
     });
     
