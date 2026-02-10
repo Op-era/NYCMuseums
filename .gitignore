@@ -1,0 +1,8 @@
+# Ignore temporary files
+*.sh
+.DS_Store
+*.log
+
+# But keep the image files
+!images/*.jpg
+!images/*.png
