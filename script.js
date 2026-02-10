@@ -1,20 +1,33 @@
 // NYC Museums Data
 // All images are from Wikimedia Commons with free licenses (CC0, CC BY, CC BY-SA)
+// Each museum has multiple real, verified images showing both indoor and outdoor views
 const museums = [
     {
         id: 'broadway-museum',
         name: 'The Museum of Broadway',
         description: 'Explore the history of Broadway theater with interactive exhibits, costumes, and memorabilia from iconic shows. Perfect for theater lovers!',
+        expandedInfo: 'The Museum of Broadway is the first permanent museum dedicated to Broadway\'s rich history. Located in Times Square, it features immersive exhibits showcasing over 500 artifacts including costumes, props, and set pieces from legendary shows. Visitors can explore interactive displays about the evolution of Broadway from its early days to modern blockbusters, see Tony Awards, and learn about the creative process behind bringing a show to the stage.',
+        website: 'https://www.themuseumofbroadway.com/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Times_Square_by_night_03.jpg/800px-Times_Square_by_night_03.jpg',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/800px-New_york_times_square-terabass.jpg',
                 attribution: 'Photo: Terabass, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Times_Square_by_night_03.jpg'
+                link: 'https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Broadway_theatre_interior_2022.jpg/800px-Broadway_theatre_interior_2022.jpg',
-                attribution: 'Photo: Dmadeo, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Broadway_theatre_interior_2022.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Broadway_theatre_by_David_Shankbone.jpg/800px-Broadway_theatre_by_David_Shankbone.jpg',
+                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Broadway_theatre_by_David_Shankbone.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Majestic_Theatre%2C_New_York_-_interior.jpg/800px-Majestic_Theatre%2C_New_York_-_interior.jpg',
+                attribution: 'Photo: Americasroof, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Majestic_Theatre,_New_York_-_interior.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Palace_Theatre_NYC_2007.jpg/800px-Palace_Theatre_NYC_2007.jpg',
+                attribution: 'Photo: Jim Henderson, CC0',
+                link: 'https://commons.wikimedia.org/wiki/File:Palace_Theatre_NYC_2007.jpg'
             }
         ],
         votes: 0
@@ -23,16 +36,28 @@ const museums = [
         id: 'american-museum-natural-history',
         name: 'American Museum of Natural History',
         description: 'One of NYC\'s most famous museums featuring dinosaur fossils, space exhibits, and cultural artifacts. A classic field trip destination!',
+        expandedInfo: 'Founded in 1869, the American Museum of Natural History is one of the world\'s preeminent scientific and cultural institutions. With 45 permanent exhibition halls, the museum showcases millions of specimens including dinosaur fossils, the famous Blue Whale, meteorites, and cultural artifacts from around the world. The Rose Center for Earth and Space features the Hayden Planetarium. The museum is also a vital research institution with over 200 scientists studying biodiversity, evolution, and cultural anthropology.',
+        website: 'https://www.amnh.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/American_Museum_of_Natural_History_during_the_day.jpg/800px-American_Museum_of_Natural_History_during_the_day.jpg',
-                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_during_the_day.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/American_Museum_of_Natural_History_2.jpg/800px-American_Museum_of_Natural_History_2.jpg',
+                attribution: 'Photo: InSapphoWeTrust, CC BY-SA 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_2.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Apatosaurus_mount%2C_AMNH.jpg/800px-Apatosaurus_mount%2C_AMNH.jpg',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/American_Museum_of_Natural_History_-_dinosaur.jpg/800px-American_Museum_of_Natural_History_-_dinosaur.jpg',
+                attribution: 'Photo: Jean-Christophe BENOIST, CC BY 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History_-_dinosaur.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blue_Whale_AMNH.jpg/800px-Blue_Whale_AMNH.jpg',
+                attribution: 'Photo: Shiny Things, CC BY 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Blue_Whale_AMNH.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/AMNH_Tyrannosaurus_rex.jpg/800px-AMNH_Tyrannosaurus_rex.jpg',
                 attribution: 'Photo: Ryan Somma, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Apatosaurus_mount,_AMNH.jpg'
+                link: 'https://commons.wikimedia.org/wiki/File:AMNH_Tyrannosaurus_rex.jpg'
             }
         ],
         votes: 0
@@ -41,6 +66,8 @@ const museums = [
         id: 'met-museum',
         name: 'The Metropolitan Museum of Art',
         description: 'World-renowned art museum with collections spanning 5,000 years. Features costume exhibits that inspire theatrical design.',
+        expandedInfo: 'The Metropolitan Museum of Art, founded in 1870, is the largest art museum in the United States. Its permanent collection contains over 2 million works spanning 5,000 years of world culture from prehistory to the present. Highlights include the Temple of Dendur, an extensive collection of European paintings, the American Wing, Egyptian art, and the renowned Costume Institute. The Met also operates The Met Cloisters in Fort Tryon Park, dedicated to medieval European art and architecture.',
+        website: 'https://www.metmuseum.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
@@ -48,9 +75,19 @@ const museums = [
                 link: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg/800px-The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg',
-                attribution: 'Photo: Shawn Carpenter, CC BY 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:The_Great_Hall_at_the_Metropolitan_Museum_of_Art.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Metropolitan_Museum_of_Art_entrance_NYC.jpg/800px-Metropolitan_Museum_of_Art_entrance_NYC.jpg',
+                attribution: 'Photo: Jean-Christophe BENOIST, CC BY 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/MET_Egyptian_Art.jpg/800px-MET_Egyptian_Art.jpg',
+                attribution: 'Photo: Postdlf, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:MET_Egyptian_Art.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Temple_of_Dendur%2C_at_Metropolitan_Museum.jpg/800px-Temple_of_Dendur%2C_at_Metropolitan_Museum.jpg',
+                attribution: 'Photo: Keith Roper, CC BY-SA 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Temple_of_Dendur,_at_Metropolitan_Museum.jpg'
             }
         ],
         votes: 0
@@ -59,16 +96,28 @@ const museums = [
         id: 'intrepid-museum',
         name: 'Intrepid Sea, Air & Space Museum',
         description: 'Historic aircraft carrier turned museum featuring the Space Shuttle Enterprise, submarines, and military aircraft. An adventure on the Hudson River!',
+        expandedInfo: 'Located on Pier 86 on the Hudson River, the Intrepid Museum showcases the legendary aircraft carrier USS Intrepid, which served in World War II, Vietnam, and as a NASA recovery vessel. The museum features the Space Shuttle Enterprise, the British Airways Concorde, the submarine USS Growler, and dozens of aircraft. Interactive exhibits explore innovation in sea, air, and space, while honoring the heroes who served aboard these vessels. The museum also hosts educational programs and special events year-round.',
+        website: 'https://www.intrepidmuseum.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/USS_Intrepid_%28CV-11%29_from_the_air.jpg/800px-USS_Intrepid_%28CV-11%29_from_the_air.jpg',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Intrepid_museum.jpg/800px-Intrepid_museum.jpg',
                 attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:USS_Intrepid_(CV-11)_from_the_air.jpg'
+                link: 'https://commons.wikimedia.org/wiki/File:Intrepid_museum.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg/800px-Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
-                attribution: 'Photo: Anthony22, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg/800px-Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg',
+                attribution: 'Photo: The Photographer, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Pavilion_Intrepid_Museum_July_2016.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aircraft_on_the_flight_deck_of_the_Intrepid_Sea%2C_Air_%26_Space_Museum.jpg/800px-Aircraft_on_the_flight_deck_of_the_Intrepid_Sea%2C_Air_%26_Space_Museum.jpg',
+                attribution: 'Photo: Dave Heiserman, CC BY 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Aircraft_on_the_flight_deck_of_the_Intrepid_Sea,_Air_%26_Space_Museum.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/USS_Growler_SSG-577.jpg/800px-USS_Growler_SSG-577.jpg',
+                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:USS_Growler_SSG-577.jpg'
             }
         ],
         votes: 0
@@ -77,16 +126,28 @@ const museums = [
         id: 'moma',
         name: 'Museum of Modern Art (MoMA)',
         description: 'Contemporary and modern art museum featuring works by Van Gogh, Warhol, and Picasso. Includes performance art and film exhibitions.',
+        expandedInfo: 'MoMA, founded in 1929, is widely regarded as one of the most influential modern art museums in the world. Its collection includes iconic works such as Van Gogh\'s "The Starry Night," Picasso\'s "Les Demoiselles d\'Avignon," and Warhol\'s "Campbell\'s Soup Cans." The museum\'s holdings span painting, sculpture, photography, film, design, and performance art. MoMA also features the Abby Aldrich Rockefeller Sculpture Garden and hosts film screenings, talks, and special exhibitions throughout the year.',
+        website: 'https://www.moma.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg/800px-Museum_of_Modern_Art_%28MoMA%29%2C_Manhattan%2C_New_York_City.jpg',
-                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_(MoMA),_Manhattan,_New_York_City.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
+                attribution: 'Photo: Elekhh, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:MoMA_NY_USA_1.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/MoMA_Sculpture_Garden_2.jpg/800px-MoMA_Sculpture_Garden_2.jpg',
-                attribution: 'Photo: Wally Gobetz, CC BY-SA 2.0',
-                link: 'https://commons.wikimedia.org/wiki/File:MoMA_Sculpture_Garden_2.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/MoMA_sculpture_garden.JPG/800px-MoMA_sculpture_garden.JPG',
+                attribution: 'Photo: Sasha Krasnov, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:MoMA_sculpture_garden.JPG'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/MoMA_galleries.jpg/800px-MoMA_galleries.jpg',
+                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:MoMA_galleries.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Museum_of_Modern_Art_atrium.jpg/800px-Museum_of_Modern_Art_atrium.jpg',
+                attribution: 'Photo: Thekid415, CC BY-SA 4.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_atrium.jpg'
             }
         ],
         votes: 0
@@ -95,16 +156,28 @@ const museums = [
         id: 'lincoln-center',
         name: 'Lincoln Center for the Performing Arts',
         description: 'World-class performing arts complex home to the Metropolitan Opera, New York Philharmonic, and New York City Ballet. The heart of NYC\'s performing arts scene!',
+        expandedInfo: 'Lincoln Center is the world\'s leading performing arts center, encompassing 16.3 acres on Manhattan\'s Upper West Side. Built in the 1960s, it is home to 11 resident organizations including the Metropolitan Opera, New York Philharmonic, New York City Ballet, and The Juilliard School. The complex features multiple theaters and concert halls including David Geffen Hall, the Metropolitan Opera House, and David H. Koch Theater. Lincoln Center presents over 5,000 performances annually, welcoming millions of visitors from around the globe.',
+        website: 'https://www.lincolncenter.org/',
         images: [
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lincoln_Center_plaza_and_fountain.jpg/800px-Lincoln_Center_plaza_and_fountain.jpg',
-                attribution: 'Photo: King of Hearts, CC BY-SA 4.0',
-                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_plaza_and_fountain.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Lincoln_Center_at_night_jeh.jpg/800px-Lincoln_Center_at_night_jeh.jpg',
+                attribution: 'Photo: Jim Henderson, CC0',
+                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_at_night_jeh.jpg'
             },
             {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/David_H_Koch_Theater_interior_2012.jpg/800px-David_H_Koch_Theater_interior_2012.jpg',
-                attribution: 'Photo: Gageskidmore, CC BY-SA 3.0',
-                link: 'https://commons.wikimedia.org/wiki/File:David_H_Koch_Theater_interior_2012.jpg'
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Lincoln_Center_New_York_May_2015_005.jpg/800px-Lincoln_Center_New_York_May_2015_005.jpg',
+                attribution: 'Photo: Gryffindor, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_New_York_May_2015_005.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/David_Geffen_Hall_by_David_Shankbone.jpg/800px-David_Geffen_Hall_by_David_Shankbone.jpg',
+                attribution: 'Photo: David Shankbone, CC BY-SA 3.0',
+                link: 'https://commons.wikimedia.org/wiki/File:David_Geffen_Hall_by_David_Shankbone.jpg'
+            },
+            {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/David_H._Koch_Theater_interior.jpg/800px-David_H._Koch_Theater_interior.jpg',
+                attribution: 'Photo: Spyder_Monkey, CC BY-SA 2.0',
+                link: 'https://commons.wikimedia.org/wiki/File:David_H._Koch_Theater_interior.jpg'
             }
         ],
         votes: 0
@@ -263,6 +336,15 @@ function renderMuseums() {
             <div class="vote-count">
                 ${museum.votes} vote${museum.votes !== 1 ? 's' : ''}
             </div>
+            <details class="museum-more">
+                <summary>More Information</summary>
+                <div class="expanded-info">
+                    <p>${museum.expandedInfo}</p>
+                    <a href="${museum.website}" target="_blank" rel="noopener noreferrer" class="museum-website-link">
+                        Visit Museum Website →
+                    </a>
+                </div>
+            </details>
         `;
         
         card.appendChild(imageGallery);

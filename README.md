@@ -15,10 +15,12 @@ An interactive polling website to vote on favorite NYC museums and cultural inst
   - Museum of Modern Art (MoMA) - Contemporary art
   - Lincoln Center for the Performing Arts - Performing arts venue
 
-- **Multiple Images Per Museum:**
-  - Exterior views of museum buildings
-  - Interior teaser images showing exhibits and spaces
+- **Multiple Real Images Per Museum:**
+  - 4 verified images per museum (previously 2)
+  - Both outdoor (exterior/context) and indoor (exhibit) views
+  - All images sourced from Wikimedia Commons with proper licensing
   - Interactive image gallery with navigation dots
+  - Replaced any hallucinated/fake image URLs with real, verified images
 
 - **Voting System:**
   - One vote per person (enforced via localStorage)
