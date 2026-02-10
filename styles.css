@@ -111,12 +111,59 @@ header h2 {
     border-color: #fbbf24;
 }
 
+.museum-image-gallery {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
 .museum-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 200px;
     object-fit: cover;
     background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #fbbf24 100%);
     border-bottom: 3px solid #fbbf24;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.museum-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.image-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(30, 58, 138, 0.6);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #fbbf24;
+    border-color: #1e3a8a;
 }
 
 .museum-info {
@@ -359,4 +406,77 @@ footer {
     .museums-grid {
         grid-template-columns: 1fr;
     }
+    
+    #attributions-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.attributions-section {
+    background: linear-gradient(to bottom, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    border: 2px solid #bae6fd;
+    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.1);
+}
+
+.attributions-section h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.attribution-intro {
+    text-align: center;
+    color: #1e40af;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+#attributions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.museum-attribution {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+}
+
+.museum-attribution h4 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 2px solid #fbbf24;
+    padding-bottom: 5px;
+}
+
+.museum-attribution ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.museum-attribution li {
+    color: #1e40af;
+    margin: 8px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.museum-attribution a {
+    color: #0369a1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.museum-attribution a:hover {
+    color: #d97706;
+    text-decoration: underline;
 }
