@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #1a202c 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -24,29 +24,26 @@ header {
     text-align: center;
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 3px solid #1e3a8a;
+    border-bottom: 3px solid #2d3748;
 }
 
 header h1 {
-    color: #1e3a8a;
-    font-size: 2.5em;
+    color: #1a202c;
+    font-size: 2.8em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 header h2 {
-    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 25%, #fde047 50%, #fbbf24 75%, #f59e0b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(217, 119, 6, 0.3);
-    filter: drop-shadow(0px 2px 3px rgba(217, 119, 6, 0.4));
+    color: #4a5568;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
 }
 
 .subtitle {
-    color: #1e3a8a;
+    color: #718096;
     font-size: 1.1em;
     font-style: italic;
     font-weight: 500;
@@ -84,7 +81,7 @@ header h2 {
 
 .status-message.info {
     background: linear-gradient(to right, #dbeafe 0%, #bfdbfe 100%);
-    color: #1e3a8a;
+    color: #2d3748;
     border: 2px solid #93c5fd;
     display: block;
 }
@@ -100,15 +97,15 @@ header h2 {
     background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(30, 58, 138, 0.15);
-    border: 2px solid #e0e7ff;
+    box-shadow: 0 5px 15px rgba(45, 55, 72, 0.15);
+    border: 2px solid #e2e8f0;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .museum-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3), 0 0 20px rgba(251, 191, 36, 0.2);
-    border-color: #fbbf24;
+    box-shadow: 0 10px 30px rgba(45, 55, 72, 0.25);
+    border-color: #cbd5e0;
 }
 
 .museum-image-gallery {
@@ -125,8 +122,8 @@ header h2 {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #fbbf24 100%);
-    border-bottom: 3px solid #fbbf24;
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #718096 100%);
+    border-bottom: 3px solid #cbd5e0;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -153,7 +150,7 @@ header h2 {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid rgba(30, 58, 138, 0.6);
+    border: 2px solid rgba(45, 55, 72, 0.6);
 }
 
 .dot:hover {
@@ -162,8 +159,8 @@ header h2 {
 }
 
 .dot.active {
-    background: #fbbf24;
-    border-color: #1e3a8a;
+    background: #4a5568;
+    border-color: #1a202c;
 }
 
 .museum-info {
@@ -171,14 +168,14 @@ header h2 {
 }
 
 .museum-info h3 {
-    color: #1e3a8a;
+    color: #1a202c;
     margin-bottom: 10px;
     font-size: 1.3em;
     font-weight: 700;
 }
 
 .museum-info p {
-    color: #666;
+    color: #4a5568;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -186,7 +183,7 @@ header h2 {
 .vote-btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #f59e0b 80%, #fbbf24 100%);
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -194,13 +191,12 @@ header h2 {
     font-weight: bold;
     cursor: pointer;
     transition: opacity 0.3s, transform 0.1s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(45, 55, 72, 0.3);
 }
 
 .vote-btn:hover {
-    opacity: 0.95;
-    box-shadow: 0 6px 10px rgba(30, 58, 138, 0.4), 0 0 15px rgba(251, 191, 36, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    opacity: 0.9;
+    box-shadow: 0 6px 10px rgba(45, 55, 72, 0.4);
 }
 
 .vote-btn:active {
@@ -217,7 +213,7 @@ header h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 5px 15px;
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     color: white;
     border-radius: 20px;
     font-weight: bold;
@@ -234,7 +230,7 @@ header h2 {
 }
 
 .results-section h3 {
-    color: #1e3a8a;
+    color: #2d3748;
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.5em;
@@ -260,7 +256,7 @@ header h2 {
     justify-content: space-between;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #2d3748;
 }
 
 .result-progress {
@@ -274,7 +270,7 @@ header h2 {
 
 .result-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 30%, #f59e0b 70%, #fbbf24 85%, #fde047 100%);
+    background: linear-gradient(90deg, #2d3748 0%, #4a5568 30%, #4a5568 70%, #718096 85%, #a0aec0 100%);
     transition: width 0.5s ease;
     display: flex;
     align-items: center;
@@ -289,8 +285,8 @@ header h2 {
     display: block;
     margin: 20px auto 0;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 25%, #fde047 50%, #fbbf24 75%, #f59e0b 100%);
-    color: #1e3a8a;
+    background: linear-gradient(135deg, #4a5568 0%, #718096 25%, #a0aec0 50%, #718096 75%, #4a5568 100%);
+    color: #2d3748;
     border: none;
     border-radius: 8px;
     font-size: 1em;
@@ -351,12 +347,12 @@ header h2 {
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 8px;
-    border-left: 4px solid #1e3a8a;
+    border-left: 4px solid #2d3748;
     box-shadow: 0 1px 3px rgba(30, 58, 138, 0.1);
 }
 
 .log-entry strong {
-    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+    background: linear-gradient(135deg, #4a5568 0%, #718096 50%, #4a5568 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -368,7 +364,7 @@ footer {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 3px solid #bfdbfe;
-    color: #1e3a8a;
+    color: #2d3748;
     font-weight: 500;
 }
 
@@ -380,13 +376,13 @@ footer {
 }
 
 .image-attribution a {
-    color: #1e3a8a;
+    color: #2d3748;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .image-attribution a:hover {
-    color: #f59e0b;
+    color: #4a5568;
     text-decoration: underline;
 }
 
@@ -422,7 +418,7 @@ footer {
 }
 
 .attributions-section h3 {
-    color: #1e3a8a;
+    color: #2d3748;
     margin-bottom: 15px;
     text-align: center;
     font-size: 1.5em;
@@ -450,10 +446,10 @@ footer {
 }
 
 .museum-attribution h4 {
-    color: #1e3a8a;
+    color: #2d3748;
     margin-bottom: 10px;
     font-size: 1.1em;
-    border-bottom: 2px solid #fbbf24;
+    border-bottom: 2px solid #718096;
     padding-bottom: 5px;
 }
 

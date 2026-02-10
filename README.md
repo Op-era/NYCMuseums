@@ -1,9 +1,9 @@
 # NYCMuseums
-Website for Sunnyside Highschool Wildcats Playhouse
+Professional NYC Museums Voting Poll
 
 ## NYC Museums Poll
 
-An interactive polling website for Sunnyside Highschool Wildcats Playhouse to vote on their next NYC field trip destination.
+An interactive polling website to vote on favorite NYC museums and cultural institutions.
 
 ### Features
 
@@ -15,6 +15,11 @@ An interactive polling website for Sunnyside Highschool Wildcats Playhouse to vo
   - Museum of Modern Art (MoMA) - Contemporary art
   - Lincoln Center for the Performing Arts - Performing arts venue
 
+- **Multiple Images Per Museum:**
+  - Exterior views of museum buildings
+  - Interior teaser images showing exhibits and spaces
+  - Interactive image gallery with navigation dots
+
 - **Voting System:**
   - One vote per person (enforced via localStorage)
   - Real-time results with percentages
@@ -22,18 +27,19 @@ An interactive polling website for Sunnyside Highschool Wildcats Playhouse to vo
   - IP address tracking for voter identification
   - Persistent data across page refreshes
 
-- **School Theme:**
-  - Blue and gold color scheme (Wildcats school colors)
+- **Professional Design:**
+  - Clean, modern interface with sophisticated color palette
   - Responsive design for mobile and desktop
-  - Theater-focused branding
+  - Comprehensive image attributions
 
 ### How to Use
 
 1. Open `index.html` in a web browser
-2. Review the museum options and descriptions
-3. Click "Vote for this Museum!" on your preferred choice
-4. View real-time results showing vote percentages
-5. Click "View Vote Logs" to see detailed voting history with IP addresses and percentages
+2. Review the museum options and browse through images
+3. Click navigation dots to view multiple images per museum
+4. Click "Vote for this Museum!" on your preferred choice
+5. View real-time results showing vote percentages
+6. Click "View Vote Logs" to see detailed voting history with IP addresses and percentages
 
 ### Running Locally
 
@@ -63,7 +69,7 @@ The deployment workflow is configured in `.github/workflows/deploy.yml`.
 ### Files
 
 - `index.html` - Main webpage structure
-- `styles.css` - Blue and gold themed styling
+- `styles.css` - Professional styled design
 - `script.js` - Voting functionality and data management
 
 ### Technologies Used
@@ -72,8 +78,13 @@ The deployment workflow is configured in `.github/workflows/deploy.yml`.
 - localStorage for client-side data persistence
 - Responsive CSS Grid layout
 - External IP tracking API integration
+- Image gallery with fade transitions
+
+### Image Attribution
+
+All images are sourced from Wikimedia Commons under Creative Commons licenses (CC0, CC BY, CC BY-SA). Full attributions are displayed at the bottom of the page and in individual museum cards.
 
 ---
 
-© 2026 Sunnyside Highschool Wildcats Playhouse
+© 2026 NYC Museums Poll
 
