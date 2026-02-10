@@ -1,45 +1,58 @@
 // NYC Museums Data
+// All images are from Wikimedia Commons with CC0 or CC-BY licenses
 const museums = [
     {
         id: 'broadway-museum',
         name: 'The Museum of Broadway',
         description: 'Explore the history of Broadway theater with interactive exhibits, costumes, and memorabilia from iconic shows. Perfect for theater lovers!',
-        image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg/800px-Shubert_Theatre%2C_Broadway%2C_Manhattan%2C_New_York_%2840602729783%29.jpg',
+        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Shubert_Theatre,_Broadway,_Manhattan,_New_York_(40602729783).jpg',
         votes: 0
     },
     {
         id: 'american-museum-natural-history',
         name: 'American Museum of Natural History',
         description: 'One of NYC\'s most famous museums featuring dinosaur fossils, space exhibits, and cultural artifacts. A classic field trip destination!',
-        image: 'https://images.unsplash.com/photo-1566127992631-137a642a90f4?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg/800px-American_Museum_of_Natural_History%2C_Central_Park_West_facade.jpg',
+        imageAttribution: 'Photo: Rhododendrites, CC BY-SA 4.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History,_Central_Park_West_facade.jpg',
         votes: 0
     },
     {
         id: 'met-museum',
         name: 'The Metropolitan Museum of Art',
         description: 'World-renowned art museum with collections spanning 5,000 years. Features costume exhibits that inspire theatrical design.',
-        image: 'https://images.unsplash.com/photo-1615485500834-bc10199bc727?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
+        imageAttribution: 'Photo: Fcb981, CC BY-SA 3.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg',
         votes: 0
     },
     {
         id: 'intrepid-museum',
         name: 'Intrepid Sea, Air & Space Museum',
         description: 'Historic aircraft carrier turned museum featuring the Space Shuttle Enterprise, submarines, and military aircraft. An adventure on the Hudson River!',
-        image: 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg/800px-Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
+        imageAttribution: 'Photo: Anthony22, CC BY-SA 3.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Space_Shuttle_Enterprise_at_the_Intrepid_Museum_July_2012.jpg',
         votes: 0
     },
     {
         id: 'moma',
         name: 'Museum of Modern Art (MoMA)',
         description: 'Contemporary and modern art museum featuring works by Van Gogh, Warhol, and Picasso. Includes performance art and film exhibitions.',
-        image: 'https://images.unsplash.com/photo-1541367777708-7905fe3296c0?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
+        imageAttribution: 'Photo: Arad, CC BY-SA 3.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:MoMA_NY_USA_1.jpg',
         votes: 0
     },
     {
         id: 'lincoln-center',
         name: 'Lincoln Center for the Performing Arts',
         description: 'World-class performing arts complex home to the Metropolitan Opera, New York Philharmonic, and New York City Ballet. The heart of NYC\'s performing arts scene!',
-        image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=400&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lincoln_Center_Night.jpg/800px-Lincoln_Center_Night.jpg',
+        imageAttribution: 'Photo: Gryffindor, CC BY-SA 3.0',
+        imageLink: 'https://commons.wikimedia.org/wiki/File:Lincoln_Center_Night.jpg',
         votes: 0
     }
 ];
@@ -163,6 +176,7 @@ function renderMuseums() {
         info.innerHTML = `
             <h3>${museum.name}</h3>
             <p>${museum.description}</p>
+            ${museum.imageAttribution ? `<p class="image-attribution"><a href="${museum.imageLink}" target="_blank" rel="noopener">${museum.imageAttribution}</a></p>` : ''}
             <button class="vote-btn" data-museum-id="${museum.id}" ${hasVoted ? 'disabled' : ''}>
                 ${hasVoted ? 'Voting Closed' : 'Vote for this Museum!'}
             </button>
