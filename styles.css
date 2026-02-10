@@ -476,3 +476,91 @@ footer {
     color: #d97706;
     text-decoration: underline;
 }
+
+/* More Information Section */
+.museum-more {
+    margin-top: 15px;
+    border-top: 2px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.museum-more summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1.05em;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.museum-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.museum-more summary::before {
+    content: '▼';
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+}
+
+.museum-more[open] summary::before {
+    transform: rotate(-180deg);
+}
+
+.museum-more summary:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e3a8a;
+}
+
+.expanded-info {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #2d3748;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.expanded-info p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.museum-website-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(45, 55, 72, 0.3);
+}
+
+.museum-website-link:hover {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    box-shadow: 0 5px 10px rgba(45, 55, 72, 0.4);
+    transform: translateY(-2px);
+}

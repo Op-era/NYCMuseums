@@ -6,6 +6,8 @@ const museums = [
         id: 'broadway-museum',
         name: 'The Museum of Broadway',
         description: 'Explore the history of Broadway theater with interactive exhibits, costumes, and memorabilia from iconic shows. Perfect for theater lovers!',
+        expandedInfo: 'The Museum of Broadway is the first permanent museum dedicated to Broadway\'s rich history. Located in Times Square, it features immersive exhibits showcasing over 500 artifacts including costumes, props, and set pieces from legendary shows. Visitors can explore interactive displays about the evolution of Broadway from its early days to modern blockbusters, see Tony Awards, and learn about the creative process behind bringing a show to the stage.',
+        website: 'https://www.themuseumofbroadway.com/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/800px-New_york_times_square-terabass.jpg',
@@ -34,6 +36,8 @@ const museums = [
         id: 'american-museum-natural-history',
         name: 'American Museum of Natural History',
         description: 'One of NYC\'s most famous museums featuring dinosaur fossils, space exhibits, and cultural artifacts. A classic field trip destination!',
+        expandedInfo: 'Founded in 1869, the American Museum of Natural History is one of the world\'s preeminent scientific and cultural institutions. With 45 permanent exhibition halls, the museum showcases millions of specimens including dinosaur fossils, the famous Blue Whale, meteorites, and cultural artifacts from around the world. The Rose Center for Earth and Space features the Hayden Planetarium. The museum is also a vital research institution with over 200 scientists studying biodiversity, evolution, and cultural anthropology.',
+        website: 'https://www.amnh.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/American_Museum_of_Natural_History_2.jpg/800px-American_Museum_of_Natural_History_2.jpg',
@@ -62,6 +66,8 @@ const museums = [
         id: 'met-museum',
         name: 'The Metropolitan Museum of Art',
         description: 'World-renowned art museum with collections spanning 5,000 years. Features costume exhibits that inspire theatrical design.',
+        expandedInfo: 'The Metropolitan Museum of Art, founded in 1870, is the largest art museum in the United States. Its permanent collection contains over 2 million works spanning 5,000 years of world culture from prehistory to the present. Highlights include the Temple of Dendur, an extensive collection of European paintings, the American Wing, Egyptian art, and the renowned Costume Institute. The Met also operates The Met Cloisters in Fort Tryon Park, dedicated to medieval European art and architecture.',
+        website: 'https://www.metmuseum.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/800px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg',
@@ -90,6 +96,8 @@ const museums = [
         id: 'intrepid-museum',
         name: 'Intrepid Sea, Air & Space Museum',
         description: 'Historic aircraft carrier turned museum featuring the Space Shuttle Enterprise, submarines, and military aircraft. An adventure on the Hudson River!',
+        expandedInfo: 'Located on Pier 86 on the Hudson River, the Intrepid Museum showcases the legendary aircraft carrier USS Intrepid, which served in World War II, Vietnam, and as a NASA recovery vessel. The museum features the Space Shuttle Enterprise, the British Airways Concorde, the submarine USS Growler, and dozens of aircraft. Interactive exhibits explore innovation in sea, air, and space, while honoring the heroes who served aboard these vessels. The museum also hosts educational programs and special events year-round.',
+        website: 'https://www.intrepidmuseum.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Intrepid_museum.jpg/800px-Intrepid_museum.jpg',
@@ -118,6 +126,8 @@ const museums = [
         id: 'moma',
         name: 'Museum of Modern Art (MoMA)',
         description: 'Contemporary and modern art museum featuring works by Van Gogh, Warhol, and Picasso. Includes performance art and film exhibitions.',
+        expandedInfo: 'MoMA, founded in 1929, is widely regarded as one of the most influential modern art museums in the world. Its collection includes iconic works such as Van Gogh\'s "The Starry Night," Picasso\'s "Les Demoiselles d\'Avignon," and Warhol\'s "Campbell\'s Soup Cans." The museum\'s holdings span painting, sculpture, photography, film, design, and performance art. MoMA also features the Abby Aldrich Rockefeller Sculpture Garden and hosts film screenings, talks, and special exhibitions throughout the year.',
+        website: 'https://www.moma.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/MoMA_NY_USA_1.jpg/800px-MoMA_NY_USA_1.jpg',
@@ -146,6 +156,8 @@ const museums = [
         id: 'lincoln-center',
         name: 'Lincoln Center for the Performing Arts',
         description: 'World-class performing arts complex home to the Metropolitan Opera, New York Philharmonic, and New York City Ballet. The heart of NYC\'s performing arts scene!',
+        expandedInfo: 'Lincoln Center is the world\'s leading performing arts center, encompassing 16.3 acres on Manhattan\'s Upper West Side. Built in the 1960s, it is home to 11 resident organizations including the Metropolitan Opera, New York Philharmonic, New York City Ballet, and The Juilliard School. The complex features multiple theaters and concert halls including David Geffen Hall, the Metropolitan Opera House, and David H. Koch Theater. Lincoln Center presents over 5,000 performances annually, welcoming millions of visitors from around the globe.',
+        website: 'https://www.lincolncenter.org/',
         images: [
             {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Lincoln_Center_at_night_jeh.jpg/800px-Lincoln_Center_at_night_jeh.jpg',
@@ -324,6 +336,15 @@ function renderMuseums() {
             <div class="vote-count">
                 ${museum.votes} vote${museum.votes !== 1 ? 's' : ''}
             </div>
+            <details class="museum-more">
+                <summary>More Information</summary>
+                <div class="expanded-info">
+                    <p>${museum.expandedInfo}</p>
+                    <a href="${museum.website}" target="_blank" rel="noopener noreferrer" class="museum-website-link">
+                        Visit Museum Website →
+                    </a>
+                </div>
+            </details>
         `;
         
         card.appendChild(imageGallery);
